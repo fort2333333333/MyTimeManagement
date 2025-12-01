@@ -999,9 +999,6 @@ def pomodoro_timer():
 # 在timer标签页调用
 with timer:
     pomodoro_timer()
-    while True:
-        time.sleep(10)
-        st.rerun()
 
 
 
