@@ -1,3 +1,16 @@
+import sys
+import subprocess
+
+# List of required packages that aren't installed by default
+required_packages = ['supabase==2.3.1', 'yagmail==0.15.293']
+
+for package in required_packages:
+    try:
+        __import__(package.split('==')[0])
+    except ImportError:
+        print(f"Installing {package}...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
 import streamlit as st
 from supabase import create_client
 from streamlit_autorefresh import st_autorefresh
@@ -1002,4 +1015,5 @@ def pomodoro_timer():
 
 # 在timer标签页调用
 with timer:
+
     pomodoro_timer()
