@@ -255,6 +255,7 @@ def dialog_signin():
 
 # 登入sidebar
 with st.sidebar:
+    st.title("MyTimeManagement")
     if not st.session_state.login_bool:
         if st.button("log in", key="login_2"):
             dialog_login()
@@ -999,6 +1000,7 @@ def pomodoro_timer():
 with timer:
 
     pomodoro_timer()
+
 
 
 
