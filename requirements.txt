@@ -1,5 +1,4 @@
 streamlit==1.51.0
 supabase==2.3.1
 yagmail==0.15.293
-pandas==2.1.4
 python-dotenv==1.0.0
