@@ -1,9 +1,5 @@
 streamlit>=1.28.0
-supabase>=2.0.0
+supabase-py>=2.0.0
 yagmail>=0.15.0
 pandas>=2.0.0
 python-dotenv>=1.0.0
-postgrest-py>=1.0.0
-gotrue-py>=1.0.0
-realtime-py>=1.0.0
-storage3-py>=1.0.0
