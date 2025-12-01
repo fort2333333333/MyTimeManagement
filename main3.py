@@ -1,15 +1,28 @@
 import sys
-import subprocess
+import os
 
-# List of required packages that aren't installed by default
-required_packages = ['supabase==2.3.1', 'yagmail==0.15.293']
-
-for package in required_packages:
+# Try to import supabase, if not available, use a different approach
+try:
+    from supabase import create_client
+except ImportError:
+    # Try to use supabase-py which might be more compatible
     try:
-        __import__(package.split('==')[0])
+        from supabase_py import create_client
     except ImportError:
-        print(f"Installing {package}...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        # If neither works, provide a helpful error message
+        st.error("""
+        **Missing Dependencies**
+        
+        The required 'supabase' package is not installed. 
+        
+        For local development, run:
+        ```
+        pip install supabase==2.3.1
+        ```
+        
+        For Streamlit Cloud, please add 'supabase==2.3.1' to your requirements.txt file.
+        """)
+        st.stop()
 
 import streamlit as st
 from supabase import create_client
@@ -1017,3 +1030,4 @@ def pomodoro_timer():
 with timer:
 
     pomodoro_timer()
+
