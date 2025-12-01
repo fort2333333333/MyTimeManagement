@@ -1,5 +1,6 @@
 import streamlit as st
 from supabase import create_client
+from streamlit_autorefresh import st_autorefresh
 from datetime import datetime, date, timedelta
 import pandas as pd
 import math
