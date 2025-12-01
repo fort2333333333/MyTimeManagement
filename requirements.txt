@@ -1,4 +1,4 @@
-streamlit==1.29.0
+streamlit>=1.29.0
 supabase==1.0.3  # 使用旧版本避免兼容性问题
 pandas==2.1.4
 yagmail==0.15.293
