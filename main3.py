@@ -1,30 +1,4 @@
 import streamlit as st
-import sys
-import os
-
-# Try to import supabase, if not available, use a different approach
-try:
-    from supabase import create_client
-except ImportError:
-    # Try to use supabase-py which might be more compatible
-    try:
-        from supabase_py import create_client
-    except ImportError:
-        # If neither works, provide a helpful error message
-        st.error("""
-        **Missing Dependencies**
-        
-        The required 'supabase' package is not installed. 
-        
-        For local development, run:
-        ```
-        pip install supabase==2.3.1
-        ```
-        
-        For Streamlit Cloud, please add 'supabase==2.3.1' to your requirements.txt file.
-        """)
-        st.stop()
-
 from supabase import create_client
 from streamlit_autorefresh import st_autorefresh
 from datetime import datetime, date, timedelta
@@ -1030,5 +1004,6 @@ def pomodoro_timer():
 with timer:
 
     pomodoro_timer()
+
 
 
