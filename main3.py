@@ -1,3 +1,4 @@
+import streamlit as st
 import sys
 import os
 
@@ -24,7 +25,6 @@ except ImportError:
         """)
         st.stop()
 
-import streamlit as st
 from supabase import create_client
 from streamlit_autorefresh import st_autorefresh
 from datetime import datetime, date, timedelta
@@ -1030,4 +1030,5 @@ def pomodoro_timer():
 with timer:
 
     pomodoro_timer()
+
 
