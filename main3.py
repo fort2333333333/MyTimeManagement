@@ -994,15 +994,12 @@ def pomodoro_timer():
             # 使用一个小的延迟然后刷新
             time.sleep(0.1)
             st.rerun()
-        
-        # 使用一个简单的自动刷新（每10秒一次）
-        st_autorefresh(interval=10000, key="phase_refresh", limit=None)
-        st.caption("⏱️ Timer is running - page will refresh every 10 seconds")
 
 # 在timer标签页调用
 with timer:
 
     pomodoro_timer()
+
 
 
 
