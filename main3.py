@@ -996,9 +996,14 @@ def pomodoro_timer():
             time.sleep(0.1)
             st.rerun()
 
+    while st.session_state.pomodoro_phase == "work":
+        time.sleep(10)
+        st.rerun()
+
 # 在timer标签页调用
 with timer:
     pomodoro_timer()
+
 
 
 
