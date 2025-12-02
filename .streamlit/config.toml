@@ -1,3 +1,10 @@
 [dependencyManagement]
 packageManager = "pip"
 requirementsFile = "requirements.txt"
+[theme]
+base = "dark"
+primaryColor = "#1B8A5A"
+backgroundColor = "#FAF7F0"
+secondaryBackgroundColor = "#EDE8D9"
+textColor = "#1E1E1E"
+font = "sans serif"
