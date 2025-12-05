@@ -271,11 +271,7 @@ with st.sidebar:
         st.success(f"account: {st.session_state.login_email}")
     else:
         st.error("you are not logged in")
-
-    if st.button("rerun"):
-        st.session_state.after_rerun = "rerun successfully"
-        st.rerun()
-
+        
 # 两个tab
 scheduler, timer = st.tabs(["scheduler", "timer"])
 
@@ -991,6 +987,7 @@ def pomodoro_timer():
 # 在timer标签页调用
 with timer:
     pomodoro_timer()
+
 
 
 
