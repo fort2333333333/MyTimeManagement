@@ -308,7 +308,10 @@ if supabase:
     sch_rows = sch_response.data
     for row in sch_rows:
         if row["email"] == st.session_state.login_email and row["completion"]:
-            st.session_state.task_completed_time[row["task"]] += row["time"]
+            try:
+                st.session_state.task_completed_time[row["task"]] += row["time"]
+            except Exception:
+                pass
     for task_key in st.session_state.task_completed_time:
         st.session_state.task_completed_time[task_key] = round(st.session_state.task_completed_time[task_key], 2)
 
@@ -987,6 +990,7 @@ def pomodoro_timer():
 # 在timer标签页调用
 with timer:
     pomodoro_timer()
+
 
 
 
