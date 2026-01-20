@@ -559,10 +559,10 @@ with scheduler:
     with week2:  # 特殊情况
         week21, week22 = st.columns(2)
         with week21:
-            if st.button("insert special case"):
+            if st.button("insert special time"):
                 insert_event()
         with week22:
-            if st.button("disable special case"):
+            if st.button("disable special time"):
                 disable_event()
         st.dataframe(st.session_state.special_time_table)
 
@@ -990,6 +990,7 @@ def pomodoro_timer():
 # 在timer标签页调用
 with timer:
     pomodoro_timer()
+
 
 
 
