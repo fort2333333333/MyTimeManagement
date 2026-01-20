@@ -630,7 +630,7 @@ with scheduler:
                 except Exception as e:
                     st.error(f"Error: {str(e)}")
     with col_text_gen:
-        st.text("Generate a schedule based your tasks and time. You schedule will always be saved, there is no need to generate new schedule if you havn't make any changes")
+        st.text("Generate a schedule based your tasks and time. You schedule will always be saved.")
 
 def clock(clock_int):
     min = clock_int // 60
@@ -990,6 +990,7 @@ def pomodoro_timer():
 # 在timer标签页调用
 with timer:
     pomodoro_timer()
+
 
 
 
