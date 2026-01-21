@@ -616,7 +616,7 @@ with scheduler:
         st.session_state.task_completion_dic[task[1]] = st.toggle(task[0], key=task[1], value=complete_value)
         task_number_ls += 1
     if task_number_ls == 0:
-        st.text("there is no task for today")
+        st.text("(there is no task for today)")
 
     col_generate, col_text_gen = st.columns([1, 3])
     with col_generate:
@@ -994,6 +994,7 @@ def pomodoro_timer():
 # 在timer标签页调用
 with timer:
     pomodoro_timer()
+
 
 
 
