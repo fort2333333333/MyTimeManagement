@@ -628,7 +628,7 @@ with scheduler:
                 except ZeroDivisionError:
                     st.error("please check your setting")
                 except Exception as e:
-                    st.error(f"Error: {str(e)}")
+                    st.error(f"please check your setting")
     with col_text_gen:
         st.text("Generate a schedule based your tasks and time. You schedule will always be saved.")
 
